@@ -1,0 +1,1 @@
+To start program run the crush the crave batch file. Thanks! Have fun I know I did while making this ^_^
