@@ -35,20 +35,24 @@ if '%errorlevel%' NEQ '0' (
 
 :start
 
-color 12
-title Crush The Crave Factorio MultiModPack Loader
+
 
 Rem user prefs load starts here ----->>>
 
 Rem Do not edit these here the options are located in the config file and can be opened with a text editor
 Rem such as notepad ++
 
+for /f "tokens=1*delims=:" %%G in ('findstr /n "^" UserPrefs.config') do if %%G equ 3 %%H
+title Crush The Crave Factorio MultiModPack Loader
+
+
+
 
 for /f "tokens=1*delims=:" %%G in ('findstr /n "^" UserPrefs.config') do if %%G equ 9 %%H
 :welcomescreenno
 :Sloaded
 for /f "tokens=1*delims=:" %%G in ('findstr /n "^" UserPrefs.config') do if %%G equ 2 %%H
-for /f "tokens=1*delims=:" %%G in ('findstr /n "^" UserPrefs.config') do if %%G equ 3 %%H
+
 
 
 
@@ -126,7 +130,7 @@ for /f "tokens=1*delims=:" %%G in ('findstr /n "^" ModList.CrushFact') do if %%G
 
 
 
-@echo off
+
 SET var=
 
 for /f "delims=" %%i in (CurrentLoad.CrushFact) do call :setVar %%i
@@ -178,6 +182,10 @@ exit
 
 :extrastuffs
 
+
+
+
+
 :skipbegincreditsyes
 
 echo Please store all mods under "C:\CTCMods" Each folder under "C:\CTCMods" will be
@@ -208,7 +216,7 @@ goto Sloaded
 
 
 
-exit
+
 
 :batchemuloadsno
 
